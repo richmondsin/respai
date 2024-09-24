@@ -4,7 +4,7 @@
 Read through our paper on LionGuard, “LionGuard: Building a Contextualized Moderation Classifier to Tackle Localized Unsafe Content”, which can be found [here](https://arxiv.org/abs/2407.10995).
 
 ### a. Why are low-resource languages challenging for natural language processing and large language models? Discuss this with reference to tokenisation.
-Answer: There are 3 reasons why low-resource languages are challenging for NLP and large language models:
+There are 3 reasons why low-resource languages are challenging for NLP and large language models:
 1. **Data scarcity**: Low-resource languages have limited data available for training NLP models. They may have numerous dialects and variations which are very different from the English language. This scarcity of data makes it difficult to build accurate and robust models for these languages. Large language models require a vast amount of data to learn the underlying patterns and relationships in the language, and the lack of data for low-resource languages hinders the performance of these models.
 
 2. **Complex Morphology**: Many low-resource languages exhibit rich morphology, where a single word can take many forms based on tense, case, or gender. For example "I go lah" (I'm definitely going) versus "I go meh?" (Am I really going?). The tokenizer have to recognise these variations and their contextual usage to accurately process the sentence structure. This variability makes it harder to tokenize and require more sophisticated tokenization strategies to handle the morphological complexity of these languages. The lack of standardisation of the spelling, grammar and vocabulary in low-resource languages further complicates the tokenization process. 
