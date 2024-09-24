@@ -65,28 +65,28 @@ The experiment is done in the python file `section1q2.py`. The results based on 
     - F1 Score: 0.4420
 
 1.	High Recall Predictions:
-- Accuracy: 57.61%: The accuracy is moderate, indicating LionGuard can correctly predict the labels more than half of the time in high-recall mode.
-- Precision: 76.33%: This shows that when LionGuard predicts something as hateful, it is right 76.33% of the time. This is quite high, which is positive.
-- Recall: 55.66%: The recall is lower, meaning it misses many actual hateful cases. However, for high-recall predictions, this suggests there may still be room for improvement in detecting more hateful content.
-- F1 Score: 64.38%: The F1 score balances both precision and recall, and it suggests that LionGuard performs reasonably but could improve in identifying more hateful content while maintaining precision.
+    - Accuracy: 57.61%: The accuracy is moderate, indicating LionGuard can correctly predict the labels more than half of the time in high-recall mode.
+    - Precision: 76.33%: This shows that when LionGuard predicts something as hateful, it is right 76.33% of the time. This is quite high, which is positive.
+    - Recall: 55.66%: The recall is lower, meaning it misses many actual hateful cases. However, for high-recall predictions, this suggests there may still be room for improvement in detecting more hateful content.
+    - F1 Score: 64.38%: The F1 score balances both precision and recall, and it suggests that LionGuard performs reasonably but could improve in identifying more hateful content while maintaining precision.
 
-Conclusion: LionGuard tends to be cautious, prioritizing precision over recall, which limits its ability to catch all cases of hateful content but ensures that when it flags something, it is usually correct.
+- Conclusion: LionGuard tends to be cautious, prioritizing precision over recall, which limits its ability to catch all cases of hateful content but ensures that when it flags something, it is usually correct.
 
 2.	Balanced Predictions:
-- Accuracy: 51.21%: The accuracy drops here, reflecting a more neutral balance between precision and recall.
-- Precision: 79.50%: Precision remains high, showing that LionGuard is still careful about flagging content, maintaining accuracy when it predicts hateful content.
-- Recall: 39.22%: The recall drops significantly, meaning that LionGuard is missing a lot of actual hateful content.
-- F1 Score: 52.52%: The F1 score shows a decline, signaling a struggle to balance precision and recall effectively.
+    - Accuracy: 51.21%: The accuracy drops here, reflecting a more neutral balance between precision and recall.
+    - Precision: 79.50%: Precision remains high, showing that LionGuard is still careful about flagging content, maintaining accuracy when it predicts hateful content.
+    - Recall: 39.22%: The recall drops significantly, meaning that LionGuard is missing a lot of actual hateful content.
+    - F1 Score: 52.52%: The F1 score shows a decline, signaling a struggle to balance precision and recall effectively.
 
-Conclusion: When LionGuard balances precision and recall, it tends to prioritize precision too much, at the cost of recall, which results in it failing to detect many hateful cases.
+- Conclusion: When LionGuard balances precision and recall, it tends to prioritize precision too much, at the cost of recall, which results in it failing to detect many hateful cases.
 
 3.	High Precision Predictions:
-- Accuracy: 47.41%: Accuracy further decreases as the focus shifts to precision.
-- Precision: 81.89%: This is the highest precision among the three settings, meaning LionGuard is very confident in its hateful predictions, rarely making mistakes in what it flags as hateful.
-- Recall: 30.27%: However, recall is at its lowest, meaning LionGuard is missing a large majority of actual hateful content. It focuses on being highly precise, but sacrifices the ability to catch most hateful cases.
-- F1 Score: 44.20%: The F1 score is the lowest, reflecting the poor balance between precision and recall.
+    - Accuracy: 47.41%: Accuracy further decreases as the focus shifts to precision.
+    - Precision: 81.89%: This is the highest precision among the three settings, meaning LionGuard is very confident in its hateful predictions, rarely making mistakes in what it flags as hateful.
+    - Recall: 30.27%: However, recall is at its lowest, meaning LionGuard is missing a large majority of actual hateful content. It focuses on being highly precise, but sacrifices the ability to catch most hateful cases.
+    - F1 Score: 44.20%: The F1 score is the lowest, reflecting the poor balance between precision and recall.
 
-Conclusion: In high-precision mode, LionGuard becomes very conservative, only flagging content when it’s extremely certain it’s hateful. However, this comes at the cost of recall, missing a lot of actual hateful content.
+- Conclusion: In high-precision mode, LionGuard becomes very conservative, only flagging content when it’s extremely certain it’s hateful. However, this comes at the cost of recall, missing a lot of actual hateful content.
 
 Summary:
 - Where LionGuard excels: It does well in precision, especially in high-precision mode, where it ensures that flagged content is indeed hateful.
