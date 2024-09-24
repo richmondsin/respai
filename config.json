@@ -1,0 +1,91 @@
+{
+    "description": "Binary classifier on harmful text in Singapore context",
+    "embedding": {
+        "tokenizer": "BAAI/bge-large-en-v1.5",
+        "model": "BAAI/bge-large-en-v1.5",
+        "max_length": 512,
+        "batch_size": 32
+    },
+    "classifier": {
+        "binary": {
+            "calibrated": true,
+            "threshold": {
+                "high_recall": 0.2,
+                "balanced": 0.5,
+                "high_precision": 0.8
+            },
+            "model_type": "ridge_classifier",
+            "model_fp": "models/lionguard-binary.onnx"
+        },
+        "hateful": {
+            "calibrated": false,
+            "threshold": {
+                "high_recall": -0.341,
+                "balanced": -0.186,
+                "high_precision": -0.008
+            },
+            "model_type": "ridge_classifier",
+            "model_fp": "models/lionguard-hateful.onnx"
+        },
+        "harassment": {
+            "calibrated": false,
+            "threshold": {
+                "high_recall": -0.571,
+                "balanced": -0.471,
+                "high_precision": -0.471
+            },
+            "model_type": "ridge_classifier",
+            "model_fp": "models/lionguard-harassment.onnx"
+        },
+        "public_harm": {
+            "calibrated": false,
+            "threshold": {
+                "high_recall": -0.713,
+                "balanced": -0.632,
+                "high_precision": -0.576
+            },
+            "model_type": "ridge_classifier",
+            "model_fp": "models/lionguard-public_harm.onnx"
+        },
+        "self_harm": {
+            "calibrated": false,
+            "threshold": {
+                "high_recall": -0.663,
+                "balanced": -0.617,
+                "high_precision": -0.608
+            },
+            "model_type": "ridge_classifier",
+            "model_fp": "models/lionguard-self_harm.onnx"
+        },
+        "sexual": {
+            "calibrated": false,
+            "threshold": {
+                "high_recall": -0.234,
+                "balanced": 0.044,
+                "high_precision": 0.277
+            },
+            "model_type": "ridge_classifier",
+            "model_fp": "models/lionguard-sexual.onnx"
+        },
+        "toxic": {
+            "calibrated": false,
+            "threshold": {
+                "high_recall": 0.098,
+                "balanced": 0.315,
+                "high_precision": 0.523
+            },
+            "model_type": "ridge_classifier",
+            "model_fp": "models/lionguard-toxic.onnx"
+        },
+        "violent": {
+            "calibrated": false,
+            "threshold": {
+                "high_recall": -0.505,
+                "balanced": -0.343,
+                "high_precision": -0.343
+            },
+            "model_type": "ridge_classifier",
+            "model_fp": "models/lionguard-violent.onnx"
+        }
+    }
+  }
