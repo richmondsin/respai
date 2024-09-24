@@ -52,39 +52,39 @@ I have some ideas on how LionGuard can be improved:
 
 1. **Leveraging Sparse Autoencoders for Feature Extraction**: Sparse autoencoders can be used to extract meaningful features from the text data, capturing the essential information that contributed to the decision making process. By incorporating sparse autoencoders into the model architecture, LionGuard can enhance its ability to identify subtle patterns and nuances in the language, particularly in low-resource languages with complex morphology and cultural context that resulted in the classification of harmful content.
 
-Input for the Sparse Autoencoder (SAE)
-1. Input Data: Numerical representation of the text data from the low-resource language, such as word embeddings. Each input example (e.g., a comment or a sentence) is represented as a high-dimensional vector.
+- Input for the Sparse Autoencoder (SAE)
+    - 1. Input Data: Numerical representation of the text data from the low-resource language, such as word embeddings. Each input example (e.g., a comment or a sentence) is represented as a high-dimensional vector.
 
-Training the Sparse Autoencoder
-1. Structure:
-- Input Layer: Matches the dimension of the input feature vectors as defined by the embedding.
-- Hidden Layer: Contains fewer neurons than the input layer, encouraging the model to compress the input data.
-- Output Layer: Matches the dimension of the input layer.
+- Training the Sparse Autoencoder
+    - 1. Structure:
+        - Input Layer: Matches the dimension of the input feature vectors as defined by the embedding.
+        - Hidden Layer: Contains fewer neurons than the input layer, encouraging the model to compress the input data.
+        - Output Layer: Matches the dimension of the input layer.
 
-2.	Training Process:
-- The SAE is trained to minimize the reconstruction error, meaning it learns to reproduce its input at the output layer. The sparsity constraint encourages the model to focus on essential features.
+    - 2. Training Process:
+        - The SAE is trained to minimize the reconstruction error, meaning it learns to reproduce its input at the output layer. The sparsity constraint encourages the model to focus on essential features.
 
-Output from the Sparse Autoencoder
-1.	Encoded Features:
-- The output of the hidden layer (the compressed representation) serves as the new feature set for each input example. This representation captures the significant patterns in the data while filtering out noise.
+- Output from the Sparse Autoencoder
+    - 1. Encoded Features:
+        - The output of the hidden layer (the compressed representation) serves as the new feature set for each input example. This representation captures the significant patterns in the data while filtering out noise.
 
-Using the Encoded Features with the Ridge Classifier
-1.	Input to Ridge Classifier:
-- Once the SAE is trained, you pass the original feature vectors (text embeddings) through the encoder part of the SAE to obtain the compressed representations.
-- These encoded features become the input for the Ridge Classifier.
-2.	Training the Ridge Classifier:
-- The Ridge Classifier is then trained using the compressed features as input and the corresponding labels (e.g., toxic, non-toxic) as the target output.
-- The classifier will learn to map the lower-dimensional representations (encoded features) to the respective classes.
+- Using the Encoded Features with the Ridge Classifier
+    - 1. Input to Ridge Classifier:
+        - Once the SAE is trained, you pass the original feature vectors (text embeddings) through the encoder part of the SAE to obtain the compressed representations.
+        - These encoded features become the input for the Ridge Classifier.
+    - 2. Training the Ridge Classifier:
+        - The Ridge Classifier is then trained using the compressed features as input and the corresponding labels (e.g., toxic, non-toxic) as the target output.
+        - The classifier will learn to map the lower-dimensional representations (encoded features) to the respective classes.
 
 This process leverages the strengths of both models: the SAE focuses on extracting meaningful features, while the Ridge Classifier effectively makes predictions based on those features. This combination can lead to improved accuracy and interpretability in tasks such as detecting hate speech or other forms of toxic language.
 
 2. **Feedback Loop**: Implement a continuous learning framework that allows LionGuard to adapt to new data over time. This can help it stay relevant as language evolves, especially in a diverse linguistic environment like Singapore where new slang and expressions emerge frequently.
 
-1. Data Feedback Loop:
-- Incorporate a mechanism to collect feedback from users regarding the moderation decisions made by LionGuard. This feedback can be used to refine the model continuously.
-- Annotate using human or AI to review flagged content and correct any misclassifications. This data can then be fed back into the training process through a database for feedback.
+- 1. Data Feedback Loop:
+    - Incorporate a mechanism to collect feedback from users regarding the moderation decisions made by LionGuard. This feedback can be used to refine the model continuously.
+    - Annotate using human or AI to review flagged content and correct any misclassifications. This data can then be fed back into the training process through a database for feedback.
 
-2. Incremental Training:
-- Implement a system for incremental training for the Ridge classifier, where LionGuard can be updated periodically with new data without requiring a complete retraining from scratch. This can include fine-tuning the model on recent examples of toxic language or new forms of hate speech.
+- 2. Incremental Training:
+    - Implement a system for incremental training for the Ridge classifier, where LionGuard can be updated periodically with new data without requiring a complete retraining from scratch. This can include fine-tuning the model on recent examples of toxic language or new forms of hate speech.
 
 By adopting this approach, LionGuard can remain relevant and effective in detecting harmful content in a changing linguistic landscape in Singapore.
