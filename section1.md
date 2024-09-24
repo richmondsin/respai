@@ -45,7 +45,7 @@ There are several weaknesses in LionGuard's methodology that could be addressed 
 3. **Interpretability**: Interpretability is about understanding how a model makes decisions, which is crucial for trust in moderation systems. Users need to know why a particular piece of content was flagged or allowed to pass through moderation. Important aspects includes transparency in the model's decision-making process, the ability to trace back to the features that influenced the model's prediction, and the capacity to explain the model's reasoning in a human-understandable way. The PR-AUC does not account for how interpretable the model is, creating a black box in the decision-making processes. The use of autoencoders could possibly enhance interpretability through dimensionality reduction, reconstruction error analysis, and feature exploration, making it a potentially valuable tool in developing more trustworthy content moderation systems.
 
 ## Q2: Evaluating LionGuard
-The experiment is done in the python file `section1q2.py`. The results based on different threshold are as follows:
+The experiment is done in the python file `section1q2.py` or the jupyter notebook `section1q2.ipynb`. The results based on different threshold are as follows:
 - High Recall Predictions:
     - Accuracy: 0.5761
     - Precision: 0.7633
