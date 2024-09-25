@@ -28,7 +28,8 @@ off_topic_detector/
 
 To install the Off-Topic Detector:
 
-1. Activate your virtual environment (recommended).
+1. Make sure you install the necessary libraries in the requirements.txt file.
+2. Activate your virtual environment (recommended).
 
 ## Training the Model
 
@@ -42,7 +43,8 @@ Ensure that you have installed all necessary dependencies before running the scr
 ### Option 1: Using Python Script (`section2q1.py`)
 
 Run the following command to train the model:
-    ```bash
+
+    ```python
     python section2q1.py
     ```
 
@@ -80,26 +82,27 @@ print("Is the prompt relevant?", result)
 
 - Other test cases to evaluate the tool's performance and accuracy in detecting off-topic prompts:
 
-Sample 1:
-```python
-system_prompt = "You are a language learning assistant, helping users practice and improve their language skills through vocabulary, grammar exercises, and conversation practice."
-user_prompt = "Can you help me practice conjugating French verbs?"
-result = is_prompt_relevant(system_prompt, user_prompt)
+    Sample 1:
+    ```python
+    system_prompt = "You are a language learning assistant, helping users practice and improve their language skills through vocabulary, grammar exercises, and conversation practice."
+    user_prompt = "Can you help me practice conjugating French verbs?"
+    result = is_prompt_relevant(system_prompt, user_prompt)
 
-print("Is the prompt relevant?", result)
-# Expected Output: True
-```
+    print("Is the prompt relevant?", result)
+    # Expected Output: True
+    ```
 
-Sample 2:
-```python
-system_prompt = "You are an online banking assistant. You help users manage their bank accounts, transfer funds, and provide advice on financial products and services."
-user_prompt = "What’s the best strategy to beat the final boss in Dark Souls?"
-result = is_prompt_relevant(system_prompt, user_prompt)
+    Sample 2:
+    ```python
+    system_prompt = "You are an online banking assistant. You help users manage their bank accounts, transfer funds, and provide advice on financial products and services."
+    user_prompt = "What’s the best strategy to beat the final boss in Dark Souls?"
+    result = is_prompt_relevant(system_prompt, user_prompt)
 
-print("Is the prompt relevant?", result)
-# Expected Output: False
-```
+    print("Is the prompt relevant?", result)
+    # Expected Output: False
+    ```
 
+## Parameters
 - system_prompt: This is the predefined context or domain of the chatbot (e.g., financial advisor).
 - user_prompt: This is the query submitted by the user.
 - is_prompt_relevant: This function checks if the user_prompt is relevant to the system_prompt. The function returns True if relevant, and False otherwise.
