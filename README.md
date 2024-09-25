@@ -55,3 +55,15 @@ Once your virtual environment is set up and activated, install the necessary dep
 ```bash
 pip install -r requirements.txt
 ```
+
+---
+
+## Final Thoughts
+
+I had a lot of fun working on these assignments and diving deep into the important topics of responsible AI and prompt relevance detection. Although time constraints limited the depth of exploration, I truly believe these are critical issues that warrant further research and continued improvement. There is much potential to refine and expand on these solutions to make AI systems fairer, more transparent, and ultimately more reliable.
+
+I would like to extend my gratitude to the GovTech Responsible AI team for providing such a challenging and engaging assessment. It was an insightful experience that allowed me to apply my skills in meaningful ways.
+
+---
+
+**Proudly developed by Richmond Sin**  
