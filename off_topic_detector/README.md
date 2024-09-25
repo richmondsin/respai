@@ -24,6 +24,7 @@ off_topic_detector/
 │   ├── tfidf_vectorizer.pkl        # TF-IDF vectorizer used during feature extraction
 │
 ├── setup.py                        # Setup script to install the package and its dependencies
+```
 
 ## Installation
 
