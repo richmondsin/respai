@@ -4,10 +4,10 @@ The **Off-Topic Detector** is a machine learning-based tool designed to filter o
 
 ## Key Features
 
-• **Off-topic Detection**: The model determines whether a user prompt is relevant to a system prompt, acting as a guardrail before the prompt is passed to an LLM.
-• **Semantic Embeddings**: The tool leverages semantic embeddings and other machine learning techniques to assess the relevance of user inputs.
-• **Customizable Domains**: Users can define the domain for the chatbot, and the tool evaluates prompts against this domain.
-• **Efficient Filtering**: Provides a more efficient solution to handle off-topic queries than relying solely on an LLM API.
+- **Off-topic Detection**: The model determines whether a user prompt is relevant to a system prompt, acting as a guardrail before the prompt is passed to an LLM.
+- **Semantic Embeddings**: The tool leverages semantic embeddings and other machine learning techniques to assess the relevance of user inputs.
+- **Customizable Domains**: Users can define the domain for the chatbot, and the tool evaluates prompts against this domain.
+- **Efficient Filtering**: Provides a more efficient solution to handle off-topic queries than relying solely on an LLM API.
 
 ## Document Structure
 
