@@ -39,34 +39,33 @@ Before you can use the tool, you need to train the model locally. You can use th
 
 Ensure that you have installed all necessary dependencies before running the scripts.
 
-### Option 1: Using Python Script (`section2.py`)
+### Option 1: Using Python Script (`section2q1.py`)
 
 Run the following command to train the model:
-
     ```bash
-    python section2.py
+    python section2q1.py
     ```
 
-### Option 2: Using Jupyter Notebook (section2.ipynb)
+### Option 2: Using Jupyter Notebook (section2q1.ipynb)
 
 Run the following command to train the model:
 
 1.	Open the notebook with:
 
     ```bash
-    jupyter notebook section2.ipynb
+    jupyter notebook section2q1.ipynb
     ```
 
 2.	Run all cells to train the model and save the trained model and vectorizer to the same directory as above.
 
 ## Model Storage
 
-• The trained model is saved in off_topic_detector/models/off_topic_model.pkl.
-• The corresponding TF-IDF vectorizer is saved in off_topic_detector/models/tfidf_vectorizer.pkl.
+- The trained model is saved in off_topic_detector/models/off_topic_model.pkl.
+- The corresponding TF-IDF vectorizer is saved in off_topic_detector/models/tfidf_vectorizer.pkl.
 
 ## Using the Off-Topic Detector
 
-• Once the model is trained, you can use the tool to detect whether a user prompt is relevant to a chatbot’s domain. Here’s an example:
+- Once the model is trained, you can use the tool to detect whether a user prompt is relevant to a chatbot’s domain. Here’s an example:
     
 ```python
 from off_topic_detector.detector import is_prompt_relevant
@@ -79,8 +78,9 @@ print("Is the prompt relevant?", result)
 # Expected Output: True
 ```
 
-• Other test cases to evaluate the tool's performance and accuracy in detecting off-topic prompts:
+- Other test cases to evaluate the tool's performance and accuracy in detecting off-topic prompts:
 
+Sample 1:
 ```python
 system_prompt = "You are a language learning assistant, helping users practice and improve their language skills through vocabulary, grammar exercises, and conversation practice."
 user_prompt = "Can you help me practice conjugating French verbs?"
@@ -88,7 +88,10 @@ result = is_prompt_relevant(system_prompt, user_prompt)
 
 print("Is the prompt relevant?", result)
 # Expected Output: True
+```
 
+Sample 2:
+```python
 system_prompt = "You are an online banking assistant. You help users manage their bank accounts, transfer funds, and provide advice on financial products and services."
 user_prompt = "What’s the best strategy to beat the final boss in Dark Souls?"
 result = is_prompt_relevant(system_prompt, user_prompt)
@@ -97,7 +100,7 @@ print("Is the prompt relevant?", result)
 # Expected Output: False
 ```
 
-• system_prompt: This is the predefined context or domain of the chatbot (e.g., financial advisor).
-• user_prompt: This is the query submitted by the user.
-• is_prompt_relevant: This function checks if the user_prompt is relevant to the system_prompt. The function returns True if relevant, and False otherwise.
+- system_prompt: This is the predefined context or domain of the chatbot (e.g., financial advisor).
+- user_prompt: This is the query submitted by the user.
+- is_prompt_relevant: This function checks if the user_prompt is relevant to the system_prompt. The function returns True if relevant, and False otherwise.
 
