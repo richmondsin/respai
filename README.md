@@ -42,11 +42,11 @@ The repository contains files to run and evaluate the **LionGuard** model on the
 
 ## Requirements
 
-Before running the code, it's recommended to create a virtual environment. You can find the detailed instructions in the [virtual environment setup guide](venv.html).
+Before running the code, it's recommended to create a virtual environment. You can find the detailed instructions in the [virtual environment setup guide](venv.html) (Proudly written by me for use in my teaching class for DSA3101: Data Science in Practice).
 
 ---
 
-(**Proudly written by me for use in my teaching class for DSA3101: Data Science in Practice**)
+
 
 ### Install dependencies:
 
