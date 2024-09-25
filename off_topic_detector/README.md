@@ -44,7 +44,9 @@ Ensure that you have installed all necessary dependencies before running the scr
 
 Run the following command to train the model:
 
-    ```python
+1.	Open the terminal and navigate to the directory containing the `section2q1.py` file:
+
+    ```bash
     python section2q1.py
     ```
 
@@ -69,16 +71,16 @@ Run the following command to train the model:
 
 - Once the model is trained, you can use the tool to detect whether a user prompt is relevant to a chatbot’s domain. Here’s an example:
     
-```python
-from off_topic_detector.detector import is_prompt_relevant
+    ```python
+    from off_topic_detector.detector import is_prompt_relevant
 
-system_prompt = "You are a gardening assistant who helps users plan and maintain their home gardens. You provide advice on plant selection, watering schedules, and soil maintenance for different types of plants."
-user_prompt = "What is the best watering schedule for indoor succulents?"
+    system_prompt = "You are a gardening assistant who helps users plan and maintain their home gardens. You provide advice on plant selection, watering schedules, and soil maintenance for different types of plants."
+    user_prompt = "What is the best watering schedule for indoor succulents?"
 
-result = is_prompt_relevant(system_prompt, user_prompt)
-print("Is the prompt relevant?", result)
-# Expected Output: True
-```
+    result = is_prompt_relevant(system_prompt, user_prompt)
+    print("Is the prompt relevant?", result)
+    # Expected Output: True
+    ```
 
 - Other test cases to evaluate the tool's performance and accuracy in detecting off-topic prompts:
 
