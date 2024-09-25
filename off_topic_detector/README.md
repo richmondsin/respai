@@ -9,13 +9,14 @@ The **Off-Topic Detector** is a machine learning-based tool designed to filter o
 - **Customizable Domains**: Users can define the domain for the chatbot, and the tool evaluates prompts against this domain.
 - **Efficient Filtering**: Provides a more efficient solution to handle off-topic queries than relying solely on an LLM API.
 
-## Document Structure
+## Project Directory Structure
 
+```plaintext
 off_topic_detector/
 │
 ├── __init__.py                     # Initializes the package (can be left empty or used for package-level imports)
 │
-├── detector.py                     # Contains the main logic for the off-topic detection
+├── detector.py                     # Contains the main logic for off-topic detection
 │   └── is_prompt_relevant()        # Function to check if the user prompt is relevant to the system prompt
 │
 ├── models/                         # Directory for storing trained models and associated vectorizers
